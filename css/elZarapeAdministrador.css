@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-start; /* Alinear elementos al principio de la página */
+    background-color: #FFFFFF;
+}
+
+.left-line {
+    background-color: red;
+    width: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.main-content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Ajustado para mover el contenido hacia arriba */
+}
+
+.header {
+    width: 100%;
+    text-align: right;
+    padding: 10px 20px; /* Ajustado para mover el contenido hacia arriba */
+}
+
+.logo {
+    height: 150px;
+}
+
+.login-container {
+    text-align: center;
+    margin-top: 20px; /* Ajustado para mover el contenido hacia arriba */
+}
+
+.title {
+    color: #FF3B30;
+    font-size: 3em; /* Aumentado para hacerlo más grande */
+    margin: 10px 0 5px 0; /* Ajustado para mover el contenido hacia arriba */
+}
+
+.subtitle {
+    color: #FFA500;
+    font-size: 1.5em; /* Aumentado para hacerlo más grande */
+    margin-bottom: 20px; /* Ajustado para mover el contenido hacia arriba */
+}
+
+.login-form {
+    width: 100%;
+    max-width: 500px; /* Aumentado para hacerlo más grande */
+    margin: 0 auto;
+}
+
+.label {
+    font-size: 1.2em; /* Aumentado para hacerlo más grande */
+    color: #FFA500;
+    margin-bottom: 10px;
+    text-align: left;
+    display: block;
+}
+
+.input {
+    width: 100%;
+    padding: 15px; /* Aumentado para hacerlo más grande */
+    margin-bottom: 15px; /* Ajustado para mover el contenido hacia arriba */
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    background-color: #FFF6E5;
+    font-size: 1.2em; /* Aumentado para hacerlo más grande */
+}
+
+.btn-custom {
+    width: 100%;
+    padding: 15px; /* Aumentado para hacerlo más grande */
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em; /* Aumentado para hacerlo más grande */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-custom:hover {
+    background-color: #FF8C00;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #666;
+}
+
