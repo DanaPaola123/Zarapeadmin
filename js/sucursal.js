@@ -42,14 +42,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const nombre = document.getElementById('nombre').value;
         const direccion = document.getElementById('direccion').value;
         const telefono = document.getElementById('telefono').value;
+        const hora = document.getElementById('hora').value; // Captura el valor de la hora
         const fotoInput = document.getElementById('foto');
         const fotoPreview = document.getElementById('foto-preview');
 
-        if (nombre && direccion && telefono) {
+        if (nombre && direccion && telefono && hora) { // Añade hora a la verificación
             const newRow = sucursalesTable.insertRow();
             newRow.insertCell(0).textContent = nombre;
             newRow.insertCell(1).textContent = direccion;
             newRow.insertCell(2).textContent = telefono;
+            newRow.insertCell(4).textContent = hora; // Añade la hora a la nueva fila
 
             if (fotoInput.files && fotoInput.files[0]) {
                 const reader = new FileReader();
@@ -82,13 +84,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const nombre = document.getElementById('nombre').value;
             const direccion = document.getElementById('direccion').value;
             const telefono = document.getElementById('telefono').value;
+            const hora = document.getElementById('hora').value; // Captura el valor de la hora
             const fotoInput = document.getElementById('foto');
             const fotoPreview = document.getElementById('foto-preview');
 
-            if (nombre && direccion && telefono) {
+            if (nombre && direccion && telefono && hora) { // Añade hora a la verificación
                 selectedRow.cells[0].textContent = nombre;
                 selectedRow.cells[1].textContent = direccion;
                 selectedRow.cells[2].textContent = telefono;
+                selectedRow.cells[4].textContent = hora; // Modifica la celda de la hora
 
                 if (fotoInput.files && fotoInput.files[0]) {
                     const reader = new FileReader();
@@ -150,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('nombre').value = selectedRow.cells[0].textContent;
         document.getElementById('direccion').value = selectedRow.cells[1].textContent;
         document.getElementById('telefono').value = selectedRow.cells[2].textContent;
+        document.getElementById('hora').value = selectedRow.cells[4].textContent; // Muestra la hora seleccionada
 
         const img = selectedRow.cells[3].querySelector('img');
         if (img) {
@@ -165,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('nombre').value = '';
         document.getElementById('direccion').value = '';
         document.getElementById('telefono').value = '';
+        document.getElementById('hora').value = ''; // Limpia el campo de hora
         document.getElementById('foto').value = '';
         document.getElementById('foto-preview').src = '#';
         document.getElementById('foto-preview').style.display = 'none';
