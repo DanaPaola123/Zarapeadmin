@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    buscarInput.addEventListener('input', function () {
+buscarInput.addEventListener('input', function () {
     const filter = buscarInput.value.toLowerCase();
-    const rows = empleadosTable.getElementsByTagName('tr');
+    const rows = alimentosTable.getElementsByTagName('tr');
 
     for (let i = 0; i < rows.length; i++) {
         const cells = rows[i].getElementsByTagName('td');
@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
 
     // Función para modificar un alimento existente
     modificarBtn.addEventListener('click', function () {
