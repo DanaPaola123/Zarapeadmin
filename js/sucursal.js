@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
             newRow.insertCell(0).textContent = nombre;
             newRow.insertCell(1).textContent = direccion;
             newRow.insertCell(2).textContent = telefono;
-            newRow.insertCell(4).textContent = hora; // Añade la hora a la nueva fila
 
             if (fotoInput.files && fotoInput.files[0]) {
                 const reader = new FileReader();
@@ -67,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 newRow.insertCell(3).textContent = 'Sin imagen';
             }
+
+            newRow.insertCell(4).textContent = hora; // Añade la hora a la nueva fila
 
             newRow.addEventListener('click', function () {
                 selectRow(newRow);
@@ -176,3 +177,4 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('foto-preview').style.display = 'none';
     }
 });
+
